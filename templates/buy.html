@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type=text/javascript>
+        $(function() {
+          $('a#test').on('click', function(e) {
+            e.preventDefault();
+            $.getJSON('/background_process_test',
+                function(data) {
+                    //do nothing
+            });
+            return false;
+          });
+        });
+    </script>
+
+    <form action="/buy" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="school" placeholder="School Name" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    {% if schools is defined %}
+        <table>
+            {% for school in schools %}
+                <tr>
+                    <td>{{school.name}}</td>
+                    <td>{{school.admission_rate}}</td>
+                    <td>{{school.sataverage}}</td>
+                    <td>
+                        <form action="/save_school" method="post">
+                                <input type="hidden" autocomplete="off" autofocus class="form-control" name="school_id" value={{school.id}} type="text">
+
+                            <button class="btn btn-primary" type="submit">Save School</button>
+                        </form>
+                    </td>
+                </tr>
+
+            {% endfor %}
+        </table>
+    {% endif %}
+
+{% endblock %}

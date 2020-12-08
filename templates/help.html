@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Help
+{% endblock %}
+
+{% block main %}
+    <div class="centered">
+        <h3>I'm the HeavyLetter HelpBot.</h3>
+        <h5>Things you can ask me:</h5>
+        <p>How do I search colleges?</p>
+        <p>How do I save colleges?</p>
+        <p>How do I change my stats on my profile?</p>
+        <p>How do I get in contact with a counselor?</p>
+        <p>How do I find a coach's email?</p>
+        <p>The sport I play isn't listed. What gives?</p>
+        <p>A college I like is outside of my range. What gives?</p>
+        <input type="text" placeholder="Talk to ChatBot" class="Chat_Bot" id="getValue">
+        <button onclick="respond()">Submit</button>
+        <p id="correct" =>Answers will appear here.</h5>
+    </div>
+    <script type="text/javascript">
+        function respond()  {
+            let input = (document.getElementById("getValue").value).toLowerCase();
+            let answer = document.getElementById("correct");
+            if (input.includes("search") && input.includes("college")) {
+                answer.innerText = "Navigate to the search colleges page. You can either search by college name and explore college information, or search based off of your stats which colleges might be a good fit!";
+            }
+            else if (input.includes("save") && input.includes("college")) {
+                answer.innerText = "Once you've found a college through the search feature, simply click the plus icon to add it to your saved list!";
+            }
+            else if (input.includes("stats") && input.includes("change")) {
+                answer.innerText = "Click the Edit Stats button on your profile card. This will take you to the update form, where you can change your stats.";
+            }
+            else if (input.includes("contact") && input.includes("counselor")) {
+                answer.innerText = "Navigate  to the contact counselor page and review our counselors. Pick the one that fits you best, then click Get in Touch!";
+            }
+            else if (input.includes("coach") && input.includes("email")) {
+                answer.innerText = "Using our search coach feature, you can search a college's name, select a sport, and get their email.";
+            }
+            else if (input.includes("sport") && input.includes("listed")) {
+                answer.innerText = "We don't currently have support for all sports, since emails had to be manually scraped!";
+            }
+            else if (input.includes("college") && input.includes("range")) {
+                answer.innerText = "Our range calculation works based off of your current stats alone. The college process is holistic, so take it with a grain of salt!";
+            }
+            else if (input=="hello" || input =="hey"|| input =="hi") {
+                answer.innerText = "Hi!";
+            }
+        }
+    </script>
+{% endblock %}

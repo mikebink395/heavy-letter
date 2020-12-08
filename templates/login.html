@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <img src="https://admissions.wwu.edu/files/2020-05/Old%20Main%20Lawn%20in%20Summertime.jpg" class="login_background"></img>
+    <div class="overlay_login">
+        {% if error %}
+            <p class="login_error"><strong>Error:</strong> {{ error }}
+        {% endif %}
+        <h2 class="login_header1">Welcome</h2>
+        <h3 class="login_header2">to admissions made easy.</h3>
+        <form action="/login" method="post" class="login_form">
+            <p class="register_text">
+                New? Set up an account
+                <a href = "/register" class="register_text">here.</a>
+            </p>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="password" placeholder="Password" type="password">
+            </div>
+            <button class="button" style="top: 100%" type="submit"><span>Log In</span></button>
+        </form>
+    </div>
+{% endblock %}

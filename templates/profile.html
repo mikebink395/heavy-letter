@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+    <div class="breathing_room">y</div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Sanders_theater_2009y.JPG" class="profile_background"></img>
+    <div class="overlay_profile">
+        <span class="profile_span">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="profile_picture"></img>
+            <p class="profile_name">{{ user[0] }}</p>
+            <table class="profile_table">
+                <tr>
+                    <th>GPA:</th>
+                    <td>{{ user[1] }}</td>
+                </tr>
+                <tr>
+                    <th>SAT Reading:</th>
+                    <td>{{ user[2] }}</td>
+                </tr>
+                <tr>
+                    <th>SAT Math:</th>
+                    <td>{{ user[3] }}</td>
+                </tr>
+                <tr>
+                    <th>ACT:</th>
+                    <td>{{ user[4] }}</td>
+                </tr>
+            </table>
+        </span>
+        <a class="nav-link" href="/update" style="color: #950000;">Edit Stats</a></li>
+    </div>
+
+    <!-- https://codepen.io/run-time/pen/VNRBJd -->
+    <div class="info_profile">
+        <img src="https://i.ibb.co/rwLzMwW/Heavy-Letter-Logo.png" class="profile_logo"></img>
+        <div class="bubble" contenteditable>Welcome to HeavyLetter Admissions! Whether you're applying as a student or a student athlete, our student
+    counselors can provide you with the guidance and tools you need to succeed. Check the help page if you need guidance on how to use the site.</div>
+    </div>
+    <div class="breathing_room">y</div>
+    <div class="scroll_box">
+        <table class="table table-bordered saved_schools">
+            <thead>
+            <tr>
+                <th>School Name</th>
+                <th>Acceptance Rate</th>
+                <th>Designation (SAT)*</th>
+                <th>Designation (ACT)*</th>
+                <th>Admission Chances (SAT)*</th>
+                <th>Admission Chances (ACT)*</th>
+            </tr>
+        </thead>
+        {% for school in schools %}
+            <tr>
+                <td>{{school.name}}</td>
+                <td>{{(school.admission_rate * 100)|int}}%</td>
+                <td>{{sat_designation[school.name]}}</td>
+                <td>{{act_designation[school.name]}}</td>
+                <td>{{(sat_chances[school.name] * 100)|int}}%</td>
+                <td>{{(act_chances[school.name] * 100)|int}}%</td>
+            </tr>
+
+        {% endfor %}
+    </table>
+    </div>
+    <div class="breathing_room">y</div>
+    <div class="bubble_2" contenteditable>*Simply take designations and admission chances as a loose prediction. College designations and admissions chances
+    are based off of a mathematical calculation of your stats relative to the school's acceptance rate and median/upper/lower percentile scores.
+    The college admissions process is holistic- do not be discouraged if a chance is not as high as you would like, especially if it's a competitive school!
+    On the other side of the coin, your admissions chances are never 100%- although your stats may be more than strong enough, the college process is not as
+    simple as stats.</div>
+    <div class="breathing_room">y</div>
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Recommended Colleges
+{% endblock %}
+
+{% block main %}
+    {% if schools is defined %}
+        <table>
+            {% for school in schools %}
+                <tr>
+                    <td>{{school.name}}</td>
+                    <td>{{school.admission_rate}}</td>
+                    <td>{{school.sataverage}}</td>
+                    <td>
+                        <form action="/save_school" method="post">
+                                <input type="hidden" autocomplete="off" autofocus class="form-control" name="school_id" value={{school.id}} type="text">
+
+                            <button class="btn btn-primary" type="submit">Save School</button>
+                        </form>
+                    </td>
+                </tr>
+
+            {% endfor %}
+        </table>
+    {% endif %}
+
+{% endblock %}

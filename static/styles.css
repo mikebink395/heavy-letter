@@ -1,0 +1,573 @@
+nav .navbar-brand
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: x-large;
+}
+
+.expand {
+    color: white;
+}
+
+/* Colors for brand */
+.white
+{
+    color: white;
+}
+
+nav .nav-item {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+nav .nav-link:hover {
+    font-size: 105%;
+}
+
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: auto;
+}
+
+main img
+{
+    /* Constrain images on small screens */
+    max-width: 100%;
+}
+
+.table
+{
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    border-spacing: 2px;
+    border-color: grey;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+
+.fling-minislide {
+    width:120%;
+    height:120%;
+    overflow: hidden;
+    position:fixed;
+    right:0%; }
+
+.fling-minislide img{
+    position:absolute;
+    animation:fling-minislide 35s infinite;
+    opacity:0;
+    width: auto;
+    height: auto;
+}
+
+@keyframes fling-minislide {25%{opacity:1;} 40%{opacity:0;}}
+.fling-minislide img:nth-child(7){animation-delay:0s;}
+.fling-minislide img:nth-child(6){animation-delay:5s;}
+.fling-minislide img:nth-child(5){animation-delay:10s;}
+.fling-minislide img:nth-child(4){animation-delay:15s;}
+.fling-minislide img:nth-child(3){animation-delay:20s;}
+.fling-minislide img:nth-child(2){animation-delay:25s;}
+.fling-minislide img:nth-child(1){animation-delay:30s;}
+
+.overlay {
+    background-color: #950000;
+    opacity:80%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.hometext1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    color: white;
+    position: relative;
+    top: 40%;
+}
+
+.hometext2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    color: white;
+    position: relative;
+    top: 47%;
+}
+
+.homeline {
+    background-color: white;
+    height: .2%;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+.button {
+  border-radius: 100px;
+  background-color: white;
+  border: none;
+  display: inline-block
+  color: #FFFFFF;
+  position: absolute;
+  top: 58%;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  left: 42%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.5s;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #580000;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 10;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.overlay_login {
+    background-color: #950000;
+    right: 25%;
+    opacity:90%;
+    position: absolute;
+    text-align: center;
+    top: 0%;
+    width: 50%;
+    height: 100%;
+}
+
+
+.login_background {
+    width: auto;
+    height: 100%;
+    position: fixed;
+}
+
+.login_form {
+    position: absolute;
+    width: 80%;
+    top: 40%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.montserrat {
+    color: #950000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.register_text {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    top: 120%;
+}
+
+.register_text:hover {
+    color: white;
+}
+
+.login_header1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    position: relative;
+    top: 15%;
+}
+
+.login_header2 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 200;
+    font-style: italic;
+    position: relative;
+    top: 20%;
+}
+
+.register_form {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button_register {
+  border-radius: 100px;
+  background-color: white;
+  display: inline-block;
+  border: none;
+  color: #FFFFFF;
+  position: relative;
+  top: 98%;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  height: 3%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button_register span {
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.5s;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 90%;
+  color: #580000;
+}
+
+
+.button_register span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button_register:hover span {
+  padding-right: 25px;
+}
+
+.button_register:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.register_background {
+    width: auto;
+    height: 150%;
+    position: fixed;
+}
+
+.register_header1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.register_header2 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 200;
+    font-style: italic;
+    text-align: center;
+}
+
+.login_error {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-style: italic;
+    position: fixed;
+    top: 70%;
+    left: 40%;
+    font-weight: 400;
+}
+
+.register_error {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-style: italic;
+    position: fixed;
+    top: 93%;
+    left: 40%;
+    font-weight: 400;
+}
+
+.heavyletter_nav {
+    width: 7%;
+}
+
+.profile_background {
+    width: auto;
+    height: 130%;
+    top: 0%;
+    z-index: -1;
+    position: fixed;
+}
+
+.overlay_profile {
+    background-color: white;
+    border-radius: 100px;
+    text-align: center;
+    opacity:80%;
+    position: relative;
+    top: 25%;
+    width: 80%;
+    left: 10%;
+    bottom: 40%;
+    transition: .5s ease-in;
+}
+
+.saved_schools {
+    font-family: 'Montserrat', sans-serif;
+    color: #950000;
+    overflow: auto;
+    position: relative;
+}
+
+.breathing_room {
+    position: relative;
+    height: 10%;
+    width: 100%;
+    background-color: white;
+    opacity: 0%;
+
+}
+
+.scroll_box {
+    position: relative;
+    background-color: white;
+    top: 10%;
+    height: 400px;
+    width: 80%;
+    left: 10%;
+    overflow: auto;
+}
+
+.profile_span {
+    display: inline-block;
+}
+
+.overlay_profile:hover {
+    border-radius: 100px;
+    top: 24%;
+    width: 82%;
+    left: 9%;
+    bottom: 39%;
+    transition: .5s ease-in;
+}
+
+.profile_table {
+    font-family: 'Montserrat', sans-serif;
+    color: #950000;
+    position: relative;
+    top: 10%;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 150%;
+}
+
+.profile_picture {
+    position: relative;
+    border-radius: 300px;
+    top: 10%;
+    width: 25%;
+    height: 60%;
+}
+
+.profile_name {
+    color: #950000;
+    font-weight: 700;
+    font-size: 300%;
+    position: relative;
+}
+
+.info_profile {
+    position: relative;
+    text-align: center;
+}
+
+.bubble {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 150%;
+  top: 70%;
+  left: 20%;
+  line-height: 24px;
+  width: 60%;
+  background: #fff;
+  border-radius: 40px;
+  padding: 24px;
+  text-align: center;
+  color: #000;
+}
+
+.bubble_2 {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 100%;
+  top: 70%;
+  left: 20%;
+  line-height: 24px;
+  width: 60%;
+  background: #fff;
+  border-radius: 40px;
+  padding: 24px;
+  text-align: center;
+  color: #000;
+}
+
+.profile_logo {
+    position: relative;
+    width: 10%;
+    top: 61%;
+    left: 2.5%;
+    height: auto;
+}
+
+.overlay_athletic {
+    background-color: white;
+    right: 25%;
+    opacity: 90%;
+    position: absolute;
+    top: 20%;
+    width: 50%;
+}
+
+.athletic_background {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0%;
+    z-index: -2;
+}
+
+.counselor_bio1 {
+    width: 60%;
+    height: 20%;
+    opacity: 80%;
+    border-radius: 200px;
+    left: 19%;
+    top: 20%;
+    background-color: white;
+    position: absolute;
+    transition: .5s ease-in;
+}
+
+.counselor_bio1:hover {
+    width: 63%;
+    height: 23%;
+    left: 17.5%;
+    top: 18%;
+    transition: .5s ease-in;
+}
+
+.counselor_bio2 {
+    width: 60%;
+    height: 20%;
+    opacity: 80%;
+    border-radius: 200px;
+    left: 19%;
+    top: 45%;
+    background-color: white;
+    position: absolute;
+    transition: .5s ease-in;
+}
+
+.counselor_bio2:hover {
+    width: 63%;
+    height: 23%;
+    left: 17.5%;
+    top: 43%;
+    transition: .5s ease-in;
+}
+
+.counselor_bio3 {
+    width: 60%;
+    height: 20%;
+    opacity: 80%;
+    border-radius: 200px;
+    left: 19%;
+    top: 70%;
+    background-color: white;
+    position: absolute;
+    transition: .5s ease-in;
+}
+
+.counselor_bio3:hover {
+    width: 63%;
+    height: 23%;
+    left: 17.5%;
+    top: 68%;
+    transition: .5s ease-in;
+}
+
+.chat_bot {
+    text-align:left;
+    position:fixed;
+    display:block;
+    top:20vh;
+    left:5vh;
+    border:1px solid black;
+    width:92.5vw;
+    margin-left:1%;
+    margin-right:2.25%;
+    height:75vh;
+    resize:none;
+    font-family:Courier;
+    overflow-y:auto;
+    user-select:none;
+    font-size:3vw;
+}
+
+.bot_text {
+    position:absolute;
+    border:1px solid black;
+    top:90vh;
+    left:12.25vw;
+    width:75vw;
+}
+
+.chat_input {
+    color:red;
+    background-color:black;
+    width:79%;
+}
+
+.overlay_update {
+    background-color: #950000;
+    right: 25%;
+    opacity:90%;
+    position: absolute;
+    top: 15%;
+    width: 50%;
+    height: 85%;
+}
+
+.centered {
+    text-align: center;
+}
